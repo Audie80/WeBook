@@ -1,6 +1,4 @@
 {
-    let _ = require('lodash'); // Charge lodash.js
-
     let author = JSON.parse(localStorage.getItem("author"))
 
     let nameAuthor = document.querySelector("#nameAuthor")
@@ -42,13 +40,15 @@
             </tr>`;
         } else {
 
+            // Utilisation de la méthode indexOf qui permet de chercher dans le tableau si aucune valeur ne correspond
+            let indexOf = 0;
             for (let i = 0; i < booksCollection.length; i++) {
-                
-                if (_.findIndex(booksCollection[i].author, ['firstname', author.firstname]) === -1) {
+                indexOf += booksCollection[i].author.firstname.indexOf(author.firstname, 0) + booksCollection[i].author.lastname.indexOf(author.lastname, 0);
+                if (indexOf === -2 * booksCollection.length) {
                     authorBooksDiv.innerHTML = `
-                    <tr role="row">
-                    <td colspan="8"><center>Aucun livre dans la base</center></td>
-                    </tr>`;
+                            <tr role="row">
+                            <td colspan="8"><center>Aucun livre enregistré</center></td>
+                            </tr>`;
                 }
                 else if (booksCollection[i].author.firstname === author.firstname && booksCollection[i].author.lastname === author.lastname) {
                     addAuthorBooks(booksCollection[i]);

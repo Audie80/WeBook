@@ -38,13 +38,15 @@
             </tr>`;
         } else {
 
-
+            // Utilisation de la méthode indexOf qui permet de chercher dans le tableau si aucune valeur ne correspond
+            let indexOf = 0;
             for (let i = 0; i < booksCollection.length; i++) {
-                if (booksCollection[i].editor.name.indexOf(editor.name) === -1) {
-                    editorBooksDiv.innerHTML = `
-                    <tr role="row">
-                    <td colspan="8"><center>Aucun livre enregistré</center></td>
-                    </tr>`;
+                indexOf += booksCollection[i].editor.name.indexOf(editor.name, 0);
+                if ( indexOf === -booksCollection.length) {
+                            editorBooksDiv.innerHTML = `
+                            <tr role="row">
+                            <td colspan="8"><center>Aucun livre enregistré</center></td>
+                            </tr>`;
                 }
                 else if (booksCollection[i].editor.name === editor.name) {
                     addEditorBooks(booksCollection[i]);

@@ -40,7 +40,13 @@
 
 
             for (let i = 0; i < booksCollection.length; i++) {
-                if (booksCollection[i].editor.name === editor.name) {
+                if (booksCollection[i].editor.name.indexOf(editor.name) === -1) {
+                    editorBooksDiv.innerHTML = `
+                    <tr role="row">
+                    <td colspan="8"><center>Aucun livre enregistré</center></td>
+                    </tr>`;
+                }
+                else if (booksCollection[i].editor.name === editor.name) {
                     addEditorBooks(booksCollection[i]);
                 }
             }

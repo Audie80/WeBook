@@ -1,4 +1,6 @@
 {
+    let _ = require('lodash'); // Charge lodash.js
+
     let author = JSON.parse(localStorage.getItem("author"))
 
     let nameAuthor = document.querySelector("#nameAuthor")
@@ -41,8 +43,14 @@
         } else {
 
             for (let i = 0; i < booksCollection.length; i++) {
-                if (booksCollection[i].author.firstname === author.firstname && booksCollection[i].author.lastname === author.lastname) {
-                    
+                
+                if (_.findIndex(booksCollection[i].author, ['firstname', author.firstname]) === -1) {
+                    authorBooksDiv.innerHTML = `
+                    <tr role="row">
+                    <td colspan="8"><center>Aucun livre dans la base</center></td>
+                    </tr>`;
+                }
+                else if (booksCollection[i].author.firstname === author.firstname && booksCollection[i].author.lastname === author.lastname) {
                     addAuthorBooks(booksCollection[i]);
                 }
             }

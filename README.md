@@ -13,35 +13,21 @@ Les avatars sont générés aléatoirement par http://lorempixel.com/
 
 
 # FONCTIONNALITES
+ - Objets Livre, Genre, Format, Editeur, Auteur, Avis,        alimentés par des formulaires 
+ - Les listes déroulantes des formulaires sont alimentées par des   objets
+ - Afficher les objets sous forme de tableaux
+ - Créer, modifier, supprimer les objets
+ - Contrôle sur les champs de formulaire
+ - Lier les objets Livre & Editeur, Livre & Auteur, Livre & Avis
+ - Statistiques
 
-    
-
- - Objets Livre, Genre, Format, Editeur, Auteur, Avis,        alimentés par des formulaires.
-   
-       
- - Les listes déroulantes des formulaires sont alimentées par des   objets.
-
-   
-       
-
- - Afficher les objets sous forme de tableaux.
-
-   
-       Créer, modifier, supprimer les objets.
-   
-       Contrôle sur les champs de formulaire.
-   
-       Lier les objets Livre & Editeur, Livre & Auteur, Livre & Avis.
-   
-       Statistiques.
-
-ET LA SUITE ?
-
+# ET LA SUITE ?
 Voici une liste d'idées :
+ - Ajout d'une fonctionnalité "budget livre" autour des prix des livres de l'utilisateur
+ - Ajout des ventes autour d'un livre et mettre ses informations
+   financières dans la fiche de l'éditeur
 
-    Ajout d'une fonctionnalité "budget livre" autour des prix des livres de l'utilisateur
-    Ajout des ventes autour d'un livre et mettre ses infomations financières dans la fiche de l'éditeur
-    Pemettre d'ajouter plusieurs genres à livre
+    Permettre d'ajouter plusieurs genres à livre
     Afficher des statistiques sur les genres sous forme de diagramme
     ...
 
@@ -49,5 +35,5 @@ Et ensuite ?
 
 Lorsque vous allez apprendre "VueJS", cela pourrait être intéressant de refaire cette application sous "VueJS". Ainsi vous verrez les gains apportés par son utilisation.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MzQyNTE4MV19
+eyJoaXN0b3J5IjpbLTIwNjU4NzIwNjJdfQ==
 -->

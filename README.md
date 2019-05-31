@@ -26,14 +26,12 @@ Voici une liste d'idées :
  - Ajout d'une fonctionnalité "budget livre" autour des prix des livres de l'utilisateur
  - Ajout des ventes autour d'un livre et mettre ses informations
    financières dans la fiche de l'éditeur
+ - Permettre d'ajouter plusieurs genres à un livre
+ - Afficher des statistiques sur les genres sous forme de diagramme
+ - ...
 
-    Permettre d'ajouter plusieurs genres à livre
-    Afficher des statistiques sur les genres sous forme de diagramme
-    ...
-
-Et ensuite ?
-
+# Et ensuite ?
 Lorsque vous allez apprendre "VueJS", cela pourrait être intéressant de refaire cette application sous "VueJS". Ainsi vous verrez les gains apportés par son utilisation.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjU4NzIwNjJdfQ==
+eyJoaXN0b3J5IjpbMTUxMjUwOTEzMV19
 -->

@@ -24,6 +24,7 @@ Les avatars sont générés aléatoirement par http://lorempixel.com/
 # ET LA SUITE ?
 Voici une liste d'idées :
 
+ - Import/Export de la bibliothèque
  - Ajout d'une fonctionnalité "budget livre" autour des prix des livres de l'utilisateur
  - Ajout des ventes autour d'un livre et mettre ses informations
    financières dans la fiche de l'éditeur
@@ -34,5 +35,5 @@ Voici une liste d'idées :
 # Et ensuite ?
 Lorsque vous allez apprendre "VueJS", cela pourrait être intéressant de refaire cette application sous "VueJS". Ainsi vous verrez les gains apportés par son utilisation.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjMwNTUyMzQ5LDE1MTI1MDkxMzFdfQ==
+eyJoaXN0b3J5IjpbMTQ1Njg5MzYyLDE1MTI1MDkxMzFdfQ==
 -->

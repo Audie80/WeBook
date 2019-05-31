@@ -44,3 +44,6 @@ Voici une liste d'idées :
 Et ensuite ?
 
 Lorsque vous allez apprendre "VueJS", cela pourrait être intéressant de refaire cette application sous "VueJS". Ainsi vous verrez les gains apportés par son utilisation.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNDA4MzYxOTc1XX0=
+-->

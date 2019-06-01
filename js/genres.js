@@ -18,7 +18,6 @@
               <span class='deleteGenre' style="cursor:pointer;margin-right:10px"><i class="far fa-trash-alt"></i></span>
               <span class='editGenre' style="cursor:pointer"><i class="far fa-edit"></i></span>
             </center></td>
-        <td>`+genre.id+`</td>
         <td>`+genre.name+`</td>
         </tr>`;
 

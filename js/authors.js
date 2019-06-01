@@ -20,7 +20,6 @@
               <span class='deleteAuthor' style="cursor:pointer;margin-right:10px"><i class="far fa-trash-alt"></i></span>
               <span class='editAuthor' style="cursor:pointer"><i class="far fa-edit"></i></span>
             </center></td>
-        <td class="authorLink" style="cursor:pointer">`+author.id+`</td>
         <td class="authorLink" style="cursor:pointer">`+author.firstname+`</td>
         <td class="authorLink" style="cursor:pointer">`+author.lastname+`</td>
         <td class="authorLink" style="cursor:pointer">`+author.birthday+`</td>
@@ -80,16 +79,16 @@
     let verifyBirthday = (birthday) => {
 
         let date = new Date(birthday)
-        if(date.getFullYear() > 1900 && date.getFullYear() <= 2001){
+        if(date.getFullYear() > 1700 && date.getFullYear() <= 2019){
             birthdayAuthor.style.border = "1px solid #d1d3e2";
             birthdayInvalidAuthor.style.display="none";
             birthdayInvalidAuthor.textContent=""
-            birthday = date.toLocaleDateString();
+            //birthday = date.toLocaleDateString();
             return birthday; 
         }else{
             birthdayAuthor.style.border = "1px solid red";
             birthdayInvalidAuthor.style.display="block";
-            birthdayInvalidAuthor.textContent="Vous devez saisir une date valide entre 1900 et 2001"
+            birthdayInvalidAuthor.textContent="Vous devez saisir une date valide entre 1700 et 2019"
             return false;
         }
        
@@ -186,12 +185,12 @@
     let goToAuthorPage = (element) => {
         let idAuthor = element.parentNode.id.split("-")[1]
         let index = idAuthor-1;
-        
+
         //On enregistre l'author sélectionné dans le localStorage
         localStorage.setItem("author",JSON.stringify(authorsCollection[index]));
         //On fait un redirect sur la page author
-        document.location = '/author.html'
-
+        //document.location = '/author.html'
+        document.location.assign("../WeBook/author.html")
             
     }
 

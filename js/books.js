@@ -41,8 +41,11 @@
             statAvisNeg++;
         }
     }
-    statAvisMoy /= avisCollection.length;
-    StatAvisNb = avisCollection.length / booksCollection.length;
+    if(avisCollection.length !== 0) {
+        statAvisMoy /= avisCollection.length;
+        StatAvisNb = avisCollection.length / booksCollection.length;
+    }
+    
 
     //On remplit les statistiques
     statDivAvisPos.innerHTML += statAvisPos + ' / ' + avisCollection.length;
@@ -94,7 +97,6 @@
               <span class='deleteBook' style="cursor:pointer;margin-right:10px"><i class="far fa-trash-alt"></i></span>
               <span class='editBook' style="cursor:pointer"><i class="far fa-edit"></i></span>
             </center></td>
-        <td class="bookLink" style="cursor:pointer">`+ book.id + `</td>
         <td class="bookLink" style="cursor:pointer">`+ book.title + `</td>
         <td class="bookLink" style="cursor:pointer">`+ book.author.firstname + ` ` + book.author.lastname + `</td>
         <td class="bookLink" style="cursor:pointer">`+ book.release + `</td>
@@ -338,7 +340,8 @@
         //On enregistre l'book sélectionné dans le localStorage
         localStorage.setItem("book", JSON.stringify(booksCollection[index]));
         //On fait un redirect sur la page book
-        document.location = '/book.html'
+        //document.location = '/book.html'
+        document.location.assign("../WeBook/book.html")
     }
 
 }

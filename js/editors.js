@@ -22,7 +22,6 @@
               <span class='deleteEditor' style="cursor:pointer;margin-right:10px"><i class="far fa-trash-alt"></i></span>
               <span class='editEditor' style="cursor:pointer"><i class="far fa-edit"></i></span>
             </center></td>
-        <td class="editorLink" style="cursor:pointer">`+editor.id+`</td>
         <td class="editorLink" style="cursor:pointer">`+editor.name+`</td>
         <td class="editorLink" style="cursor:pointer">`+editor.creation+`</td>
         <td class="editorLink" style="cursor:pointer">`+editor.code+`</td>
@@ -49,22 +48,22 @@
             <td colspan="6"><center>Aucun éditeur dans la base</center></td>
             </tr>`;
         }else{
-            
-            let books = JSON.parse(localStorage.getItem("books"));
-            for(let i = 0;i<editorsCollection.length;i++){
-                    //Calcule le nombre de livres par éditeur
-                    for (j = 0; j < books.length; j++) {
-                        if (books[j].editor.name === editorsCollection[i].name) {
+
+                for(let i = 0;i<editorsCollection.length;i++){
+                        //Calcule le nombre de livres par éditeur
+                        for (j = 0; j < booksCollection.length; j++) {
+                            if (booksCollection[j].editor.name === editorsCollection[i].name) {
+                                
+                                nbBooks++;
+                            }
+                            editorsCollection[i].nbBooks = nbBooks;
+                            localStorage.setItem("editors", JSON.stringify(editorsCollection));
                             
-                            nbBooks++;
                         }
-                        editorsCollection[i].nbBooks = nbBooks;
-                        localStorage.setItem("editors", JSON.stringify(editorsCollection));
-                        
-                    }
-                nbBooks = 0;
-                addEditor(editorsCollection[i])
-            }
+                    // Remise à zéro pour l'éditeur suivant
+                    nbBooks = 0;
+                    addEditor(editorsCollection[i]);
+                }
 
             let editEditor = document.querySelectorAll(".editEditor")
             Array.from(editEditor).forEach((element) => {
@@ -213,7 +212,7 @@
         }
        
     }
-    
+
     //Déclaration de la méthode linkToEditor
     let goToEditorPage = (element) => {
         let idEditor = element.parentNode.id.split("-")[1]
@@ -222,7 +221,8 @@
         //On enregistre l'éditeur sélectionné dans le localStorage
         localStorage.setItem("editor", JSON.stringify(editorsCollection[index]));
         //On fait un redirect sur la page editor.html
-        document.location = '/editor.html'
+        //document.location = '/editor.html'
+        document.location.assign("../WeBook/editor.html")
     }
     
 

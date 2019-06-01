@@ -18,7 +18,6 @@
               <span class='deleteFormat' style="cursor:pointer;margin-right:10px"><i class="far fa-trash-alt"></i></span>
               <span class='editFormat' style="cursor:pointer"><i class="far fa-edit"></i></span>
             </center></td>
-        <td>`+format.id+`</td>
         <td>`+format.name+`</td>
         </tr>`;
 

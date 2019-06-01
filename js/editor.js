@@ -71,6 +71,7 @@
         //On enregistre l'book sélectionné dans le localStorage
         localStorage.setItem("book", JSON.stringify(booksCollection[index]));
         //On fait un redirect sur la page book
-        document.location = '/book.html'
+        //document.location = '/book.html'
+        document.location.assign("../WeBook/book.html")
     }
 }
